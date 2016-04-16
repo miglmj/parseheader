@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/miguelmejiamontes/tools"
+	"github.com/miglmj/tools"
 	"net/http"
 	"strings"
 )
