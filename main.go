@@ -24,7 +24,7 @@ func showHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func returnHeaders(w http.ResponseWriter, r *http.Request) {
-	ipadr := strings.Split(r.RemoteAddr, ":")[0]
+	ipadr := strings.Split(r.Header.Get("X-FORWARDED-FOR"), ",")[0]
 	lang := strings.Split(r.Header.Get("Accept-Language"), ",")[0]
 	softw := extractSoftware(r.UserAgent())
 
