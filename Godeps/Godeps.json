@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/miguelmejiamontes/parseheader",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v62",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/miguelmejiamontes/tools",
+			"Rev": "d42736f190ad1ee13cb80c289925e75c27324d68"
+		},
+		{
+			"ImportPath": "github.com/russross/blackfriday",
+			"Comment": "v1.4-23-gb43df97",
+			"Rev": "b43df972fb5fdf3af8d2e90f38a69d374fe26dd0"
+		},
+		{
+			"ImportPath": "github.com/shurcooL/sanitized_anchor_name",
+			"Rev": "10ef21a441db47d8b13ebcc5fd2310f636973c77"
+		}
+	]
+}
