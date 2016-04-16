@@ -1,13 +1,10 @@
 {
-	"ImportPath": "github.com/miguelmejiamontes/parseheader",
+	"ImportPath": "github.com/miglmj/parseheader",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v62",
-	"Packages": [
-		"./..."
-	],
 	"Deps": [
 		{
-			"ImportPath": "github.com/miguelmejiamontes/tools",
+			"ImportPath": "github.com/miglmj/tools",
 			"Rev": "d42736f190ad1ee13cb80c289925e75c27324d68"
 		},
 		{
