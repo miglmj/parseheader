@@ -25,10 +25,16 @@ func showHome(w http.ResponseWriter, r *http.Request) {
 
 func returnHeaders(w http.ResponseWriter, r *http.Request) {
 	ipadr := strings.Split(r.RemoteAddr, ":")[0]
-	lang := r.Header.Get("Accept-Language")
-	softw := r.UserAgent()
+	lang := strings.Split(r.Header.Get("Accept-Language"), ",")[0]
+	softw := extractSoftware(r.UserAgent())
 
 	builtHeader := headers{ipadr, lang, softw}
 	obj, _ := json.Marshal(builtHeader)
 	w.Write([]byte(obj))
+}
+
+func extractSoftware(useragent string) string {
+	preTrim := strings.Split(useragent, "(")[1]
+	postTrim := strings.Split(preTrim, ")")[0]
+	return postTrim
 }
