@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"github.com/miguelmejiamontes/tools"
 	"net/http"
+	"strings"
 )
 
 type headers struct {
@@ -23,7 +24,7 @@ func showHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func returnHeaders(w http.ResponseWriter, r *http.Request) {
-	ipadr := r.RemoteAddr
+	ipadr := strings.Split(r.RemoteAddr, ":")[0]
 	lang := r.Header.Get("Accept-Language")
 	softw := r.UserAgent()
 
